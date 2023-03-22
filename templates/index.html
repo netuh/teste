@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        /* .rotate_image {
+            -webkit-transform: rotate({{ message }});
+            -moz-transform: rotate({{ message }});
+            -ms-transform: rotate({{ message }});
+            -o-transform: rotate({{ message }});
+            transform: rotate({{ message }});
+        }
+   */
+        img {
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            width: 256px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            transform: rotate({{ message }});
+        }
+        h1 {
+            color: green;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="1">
-    <title>FlaskApp</title>
+    <title>Demonstração</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <h2>Welcome to FlaskApp!</h2>
-    <h3>{{ message }}</h3>
+    <h1>Demonstração</h1>
+    <center>
+    <img class="rotate_image" src="{{url_for('static', filename='images.png')}}"/>
+    </center>
 </body>
 </html>
